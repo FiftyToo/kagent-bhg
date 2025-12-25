@@ -1,0 +1,14 @@
+# Example: GPT-4o model configuration
+# Uncomment to use GPT-4o (faster, cheaper than GPT-4 Turbo)
+#
+# apiVersion: kagent.dev/v1alpha2
+# kind: ModelConfig
+# metadata:
+#   name: openai-gpt-4o
+#   namespace: kagent
+# spec:
+#   provider: openai
+#   model: gpt-4o
+#   apiKeySecret:
+#     name: openai-api-key
+#     key: api-key

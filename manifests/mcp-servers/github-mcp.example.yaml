@@ -1,0 +1,18 @@
+# Example: GitHub MCP Server
+# Uncomment and modify to add GitHub integration
+#
+# Prerequisites:
+# 1. Deploy the GitHub MCP server implementation
+# 2. Create a secret with GitHub token:
+#    kubectl create secret generic github-token -n kagent --from-literal=token=ghp_xxx
+# 3. Reference the secret in the deployment
+#
+# apiVersion: kagent.dev/v1alpha2
+# kind: RemoteMCPServer
+# metadata:
+#   name: github-mcp
+#   namespace: kagent
+# spec:
+#   description: GitHub repository and PR operations
+#   protocol: STREAMABLE_HTTP
+#   url: http://github-mcp.kagent:8080/mcp

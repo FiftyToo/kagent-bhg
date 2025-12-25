@@ -1,0 +1,9 @@
+apiVersion: kagent.dev/v1alpha2
+kind: RemoteMCPServer
+metadata:
+  name: kagent-tool-server
+  namespace: kagent
+spec:
+  description: Kubernetes and Helm operations tools
+  protocol: STREAMABLE_HTTP
+  url: http://kagent-tools.kagent:8084/mcp
