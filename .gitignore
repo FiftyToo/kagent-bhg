@@ -1,0 +1,29 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.log
+
+# Ignore kubeconfig files
+kubeconfig*
+*.kubeconfig
+
+# Ignore secret files (never commit secrets!)
+*secret*.yaml
+*secret*.yml
+*.key
+*.pem
+
+# Ignore local environment files
+.env
+.env.local
