@@ -1,0 +1,40 @@
+# Copy this template to create a new agent
+# Example: cp templates/agent-template.yaml manifests/agents/my-new-agent.yaml
+
+apiVersion: kagent.dev/v1alpha2
+kind: Agent
+metadata:
+  name: my-agent-name  # Change this to your agent name (lowercase, hyphens)
+  namespace: kagent
+spec:
+  type: Declarative
+  description: Brief description of what this agent does
+  declarative:
+    modelConfig: openai-gpt-4  # Reference to a ModelConfig resource
+    stream: true  # Enable streaming responses
+    
+    # Optional: Add tools from MCP servers
+    # tools:
+    #   - type: McpServer
+    #     mcpServer:
+    #       apiGroup: kagent.dev
+    #       kind: RemoteMCPServer
+    #       name: kagent-tool-server
+    #       toolNames:
+    #         - k8s_apply_manifest
+    #         - helm_upgrade
+    
+    systemMessage: |-
+      You are an AI agent that [describe role].
+      
+      Responsibilities:
+      - Responsibility 1
+      - Responsibility 2
+      
+      Constraints:
+      - Constraint 1
+      - Constraint 2
+      
+      Output format:
+      - Format guideline 1
+      - Format guideline 2
