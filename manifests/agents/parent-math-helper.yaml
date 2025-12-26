@@ -7,7 +7,7 @@ spec:
   type: Declarative
   description: Helps parents with 6th grade math homework
   declarative:
-    modelConfig: kagent/openai-gpt-5
+    modelConfig: openai-gpt-5
     stream: true
     systemMessage: |-
       You are an expert math education assistant designed to help parents with their 6th-grade child's math homework. Your goal is to provide accurate, easy-to-understand explanations that bridge the gap between modern teaching methods and those from the past.
